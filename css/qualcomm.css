@@ -76,18 +76,14 @@ body {
   padding: 60px 0px;
 }
 
-.video-section-align-left {
+.video-section-left {
   display: inline-block;
   width: 925px;
 }
 
-.video-main-section {
+.video-content {
   height: 520px;
   position: relative;
-}
-
-.play-icon {
-  cursor: pointer;
 }
 
 .video-icon {
@@ -95,21 +91,22 @@ body {
   top: 282px;
   left: 50%;
   margin-left: -32px;
+  cursor: pointer;
 }
 
-.video-bottom-section {
+.video-section-bottom {
   padding: 28px 30px;
   background: rgba(255, 255, 255, 1);
 }
 
-.video-bottom-main {
+.video-bottom-title {
   font-size: 20px;
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
   line-height: 28px;
 }
 
-.video-bottom-sub-container {
+.video-bottom-subtitle-content {
   display: flex;
   align-items: center;
   padding-top: 6px;
@@ -140,7 +137,7 @@ body {
   margin-top: -1.5px;
 }
 
-.video-bottom-sub {
+.video-bottom-subtitle {
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -149,19 +146,19 @@ body {
   margin-left: 10px;
 }
 
-.video-section-align-right {
+.video-section-right {
   display: inline-block;
   width: 315px;
   vertical-align: top;
   background: rgba(255, 255, 255, 1);
 }
 
-.video-intro-section {
+.video-lesson {
   padding: 0px 20px 10px;
   position: relative;
 }
 
-.intro-item-text {
+.video-lesson-title {
   width: 225px;
   font-size: 20px;
   font-weight: 600;
@@ -170,27 +167,35 @@ body {
   padding-top: 30px;
 }
 
-.intro-note-container {
+.lesson-info {
+  height: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 5px;
+  margin-top: 5px;
 }
 
-.icon-time {
+.have-icon:before {
+  content: "";
   width: 16px;
-  height: 16px;
+  height: 20px;
+  background: url(./../images/qualcomm/time.png);
+  background-size: 16px 16px;
+  background-position: center;
+  display: block;
+  float: left;
+  background-repeat: no-repeat;
   margin-right: 8px;
 }
 
-.course-dash {
+.lesson-dash {
   width: 1px;
   height: 11px;
   background: linear-gradient(0deg, #999 0%, #999 20%, transparent 20%, transparent 40%, #999 40%, #999 60%, transparent 60%, transparent 80%, #999 80%, #999 100%);
   margin-right: 8px;
 }
 
-.course-note {
+.lesson-note {
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -199,12 +204,12 @@ body {
   margin-right: 8px;
 }
 
-.course-rank {
+.lesson-tag_level {
   position: absolute;
   right: 25px;
 }
 
-.intro-btn {
+.lesson-btn {
   font-size: 12px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -218,19 +223,19 @@ body {
   cursor: pointer;
 }
 
-.video-chapter-section {
+.video-chapter {
   width: 315px;
   border-bottom: 1px solid #EAEAEA;
   padding-left: 20px;
 }
 
-.chapter-list {
+.video-chapter-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.chapter-item {
+.video-chapter-item {
   cursor: pointer;
   position: relative;
 }
@@ -257,7 +262,7 @@ body {
   height: 3px;
 }
 
-.chapter-item:hover .chapter-item-link::after {
+.video-chapter-item:hover .chapter-item-link::after {
   display: block;
   position: absolute;
   bottom: 0px;
@@ -273,24 +278,24 @@ body {
 }
 
 
-.catalog-list {
+.video-catalog-list {
   padding-top: 12px;
   height: 362px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-.catalog-list::-webkit-scrollbar {
+.video-catalog-list::-webkit-scrollbar {
   width: 3px;
 }
 
-.catalog-list::-webkit-scrollbar-thumb {
+.video-catalog-list::-webkit-scrollbar-thumb {
   width: 3px;
   height: 60px;
   background: rgba(222, 222, 222, 1);
 }
 
-.catalog-item-main {
+.catalog-item-title {
   font-size: 14px;
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
@@ -299,7 +304,7 @@ body {
   margin-left: 20px;
 }
 
-.catalog-item-container {
+.catalog-item-content {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -307,7 +312,7 @@ body {
   margin: 0 auto;
 }
 
-.catalog-item-container:hover {
+.catalog-item-content:hover {
   width: 304px;
   height: 51px;
   background: rgba(51, 51, 51, .1);
@@ -316,19 +321,19 @@ body {
 }
 
 
-.catalog-item-container:hover .catalog-item-sub {
+.catalog-item-content:hover .catalog-info {
   margin-top: 15px;
   transition: all 0.1s ease-in;
 }
 
-.catalog-item-container:hover .catalog-item-time {
+.catalog-item-content:hover .catalog-item-time {
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: rgba(51, 51, 51, 1);
   transition: all 0.1s ease-in;
 }
 
-.catalog-item-sub {
+.catalog-info {
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -337,7 +342,7 @@ body {
   margin: 11.5px 0px 11.5px 11px;
 }
 
-.catalog-item-time {
+.catalog-time {
   font-size: 12px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -362,12 +367,12 @@ body {
   margin-right: 10px;
 }
 
-.lecturer-section,
+.teacher-section,
 .product-section {
   background-color: rgba(245, 245, 245, 1);
 }
 
-.lecturer-container,
+.teacher-container,
 .product-container {
   width: 1240px;
   padding-bottom: 60px;
@@ -375,7 +380,7 @@ body {
   position: relative;
 }
 
-.lecturer-title,
+.teacher-title,
 .product-title {
   font-size: 26px;
   font-weight: 600;
@@ -383,13 +388,13 @@ body {
   line-height: 37px;
 }
 
-.lecturer-list {
+.teacher-list {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
 }
 
-.lecturer-item {
+.teacher-item {
   width: 240px;
   height: 405px;
   background: rgba(255, 255, 255, 1);
@@ -397,8 +402,8 @@ body {
   padding: 40px 0px;
 }
 
-.lecturer-icon-left,
-.lecturer-icon-right {
+.teacher-icon-left,
+.teacher-icon-right {
   padding: 15px 0px;
   width: 44px;
   height: 44px;
@@ -408,11 +413,11 @@ body {
   cursor: pointer;
 }
 
-.lecturer-icon-left {
+.teacher-icon-left {
   left: -50px;
 }
 
-.lecturer-icon-right {
+.teacher-icon-right {
   right: -50px;
 }
 
@@ -421,7 +426,7 @@ body {
   height: auto;
 }
 
-.lecturer-name {
+.teacher-item-name {
   font-size: 20px;
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
@@ -429,7 +434,7 @@ body {
   padding-top: 20px;
 }
 
-.lecturer-label {
+.teacher-item-label {
   font-size: 16px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -438,7 +443,7 @@ body {
   padding-top: 10px;
 }
 
-.lecturer-description {
+.teacher-item-description {
   width: 210px;
   margin: 0 auto;
   font-size: 16px;
@@ -449,24 +454,29 @@ body {
   padding-top: 10px;
 }
 
-.product-in-container {
+.product-content {
   padding-top: 30px;
   display: flex;
   justify-content: flex-start;
 }
 
-.product-list {
+.product-img {
+  width: 300px;
+  height: 210px;
+}
+
+.product-section-right {
   margin-left: 40px;
 }
 
-.product-text {
+.product-info-title {
   font-size: 26px;
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
   line-height: 37px;
 }
 
-.product-description {
+.product-info-description {
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -509,7 +519,7 @@ body {
   background-color: rgba(50, 83, 220, 1);
 }
 
-.product-note-container {
+.product-tag-content {
   display: flex;
   width: 485px;
   justify-content: space-between;
@@ -517,7 +527,7 @@ body {
   align-items: center;
 }
 
-.product-note-main {
+.product-tag {
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -525,7 +535,7 @@ body {
   line-height: 20px;
 }
 
-.product-note-link {
+.product-tag-link {
   font-size: 12px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -539,11 +549,11 @@ body {
   line-height: 27px;
 }
 
-.product-note-link:hover {
+.product-tag-link:hover {
   background: rgb(187, 233, 240);
 }
 
-.product-note-other {
+.product-tag-other {
   width: 180px;
 }
 
@@ -559,15 +569,25 @@ body {
   justify-content: space-between;
 }
 
-.help-item-one,
-.help-item-two,
-.help-item-three {
+.help-item {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 400px;
   height: 160px;
   cursor: pointer;
+}
+.help-item:hover {
+  animation: help-hover 0.2s ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes help-hover{
+  0%{
+    box-shadow: none;
+  }
+  100%{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+  }
 }
 
 .help-item-one {
@@ -582,7 +602,7 @@ body {
   background-image: url(./../images/qualcomm/blue.png);
 }
 
-.help-manual-text {
+.help-manual {
   font-size: 16px;
   font-weight: 600;
   text-align: center;
@@ -610,7 +630,7 @@ body {
   text-align: center;
 }
 
-.community-text {
+.community-item-info {
   font-size: 16px;
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
@@ -618,7 +638,7 @@ body {
   padding-top: 19px;
 }
 
-.community-subtext {
+.community-item-sub-info {
   font-size: 13px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -627,7 +647,7 @@ body {
   padding-top: 10px;
 }
 
-.community-join {
+.community-item-btn {
   display: inline-block;
   width: 140px;
   height: 41px;
@@ -640,6 +660,6 @@ body {
   margin-top: 10px;
 }
 
-.community-join:hover {
+.community-item-btn:hover {
   background-color: rgb(63, 96, 224);
 }
